@@ -20,6 +20,7 @@ public class AeroGearActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        System.setProperty("dexmaker.dexcache", System.getProperty("java.io.tmpdir", "."));
 
         Field[] fields = getClass().getDeclaredFields();
         for (Field field : fields) {
